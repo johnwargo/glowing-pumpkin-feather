@@ -2,7 +2,7 @@
    Glowing Pumpkin Project (Feather Version)
 
    By John M. Wargo
-   September 24, 2016
+   September, 2017
  **************************************************/
 
 //Adafruit Feather board
