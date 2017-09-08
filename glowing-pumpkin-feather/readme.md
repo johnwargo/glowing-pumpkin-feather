@@ -24,7 +24,12 @@ As you can see from the following picture, it's a pretty big pumpkin; that's a q
 
 ![Finished Project](images/figure-01.png)
 
-For lighting, I had to think bigger. Since this was a much larger pumpkin to illuminate, I had to go beyond the simple NeoPixel ring. For this project, I used the Adafruit NeoPixel FeatherWing, a 8x4 array of bright, tri-color LEDs (that's 32 LEDs for those of you who are mathematically challenged). I then paired the NeoPixel FeatherWing with the Adafruit Feather HUZZAH since I wanted to do something interesting on the network for my next version of this (coming soon).
+For lighting, I had to think bigger. Since this was a much larger pumpkin to illuminate, I had to go beyond the simple NeoPixel ring. For this project, I used the Adafruit NeoPixel FeatherWing, a 8x4 array of bright, tri-color LEDs (that's 32 LEDs for those of you who are mathematically challenged). I then paired the NeoPixel FeatherWing with the Adafruit Feather HUZZAH since I wanted to do something interesting on the network.
+
+So, there are two versions of the project:
+
++	The Feather HUZZAH and NeoPixel FeatherWing version of the project. This version simply illuminates the pumpkin with bright lights, cycling through multiple colors over time. You're looking at this version of the project.
++ The [Feather HUZZAH, NeoPixel FeatherWing, and Adalogger FeatherWing](../glowing-pumpkin-feather-timer/readme.md) version. This version of the project does the same things as the other versions, but for this one, I used a real-time clock FeatherWing and the Feather's Wi-Fi network connection to connect to a time server, update the board's clock with the correct time, then turn the NeoPixels on and off on a predetermined schedule (set by you in the project's code). How cool is that?
 
 ## Component List
 
