@@ -58,8 +58,8 @@ const int timeZone = EDT;
 // Turn the relay on at 5:30 AM, turn the relay off at 7:00 AM.
 // {530, 700}
 int slots[NUMSLOTS][2] = {
-  {1800, 1830},
-  {1900, 1930}
+  {600, 800},
+  {1900, 2100}
   //BE SURE TO UPDATE THE NUMSLOTS CONSTANT IF YOU ADD/REMOVE
   //ROWS FROM THIS ARRAY
 };
