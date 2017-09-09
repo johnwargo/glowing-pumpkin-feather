@@ -1,5 +1,7 @@
 # Arduino Glowing Pumpkin (Feather, Timer)
 
+
+
 <!-- toc -->
 
 * [Introduction](#introduction)
@@ -10,12 +12,13 @@
 * [Installing the Code](#installing-the-code)
 * [About the Code](#about-the-code)
   * [Configuring Wi-Fi Settings](#configuring-wi-fi-settings)
+  * [Configuring On and Off Times](#configuring-on-and-off-times)
   * [Defining Colors](#defining-colors)
-  * [Setup](#setup)
-  * [Main Loop](#main-loop)
+  * [Sketch Logic](#sketch-logic)
 * [Final Assembly](#final-assembly)
 
 <!-- toc stop -->
+
 
 ## Introduction
 
