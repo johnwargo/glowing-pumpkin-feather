@@ -41,6 +41,7 @@ For this version of the project, I used the following hardware:
 
 + [Adafruit Feather HUZZAH with ESP8266 WiF](https://www.adafruit.com/product/2821)
 + [Adalogger FeatherWing - RTC](https://www.adafruit.com/product/2922)
++ [CR1220 battery](https://www.adafruit.com/product/380)
 + [NeoPixel FeatherWing](https://www.adafruit.com/product/2945)
 + [Feather Header Kit - 12-pin and 16-pin Female Header Set](https://www.adafruit.com/product/2886)
 + [Feather Stacking Headers - 12-pin and 16-pin female headers](https://www.adafruit.com/product/2830)
