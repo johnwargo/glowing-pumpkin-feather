@@ -13,6 +13,8 @@ So, there are two versions of the project:
 +	The [Feather HUZZAH and NeoPixel FeatherWing](glowing-pumpkin-feather/readme.md) version of the project. This version simply illuminates the pumpkin with bright lights, cycling through multiple colors over time.
 + The [Feather HUZZAH, NeoPixel FeatherWing, and Adalogger FeatherWing](glowing-pumpkin-feather-timer/readme.md) version. This version of the project does the same things as the other versions, but for this version, I used a real-time clock FeatherWing and the Feather's Wi-Fi network connection to connect to a time server, update the board's clock with the correct time, then turn the NeoPixels on and off on a predetermined schedule (set by you in the project's code). How cool is that? 
 
+Here's a [video of the final project in action](https://vimeo.com/236226091).
+
 ***
 
 If you find this code useful, and feel like thanking me for providing it, please consider making a purchase from [my Amazon Wish List](https://amzn.com/w/1WI6AAUKPT5P9). You can find information on many different topics on my [personal blog](http://www.johnwargo.com). Learn about all of my publications at [John Wargo Books](http://www.johnwargobooks.com).

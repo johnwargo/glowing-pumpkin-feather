@@ -236,6 +236,8 @@ void setup() {
   //Initialize the pointer that tells the sketch whether the LEDs were
   //on or off.
   wasOn = false;
+
+  Serial.println("Exiting setup()");
 }
 
 void loop() {
