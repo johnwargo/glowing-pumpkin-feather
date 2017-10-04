@@ -41,13 +41,13 @@
 //time during the summer if you live in an area that observes daylight time.
 const int timeZone = EDT;
 
-//Wi-Fi settings are in an external file: **wifi-config.h**
+//Wi-Fi settings are in an external file: wifi-config.h
 //Set your Wi-Fi SSID and password there.
 
 //Populate the following variable with the number of rows in the slots array
 //I'm doing this way because Arduino doesn't have an easy way to determine
 //the size of an array at runtime, especially multidimensional arrays.
-#define NUMSLOTS 2
+#define NUMSLOTS 8
 //Use the Slots array to define when the relay(s) go on and off
 //Slots array values: {onTime, offTime };
 // Examples:
@@ -58,8 +58,14 @@ const int timeZone = EDT;
 // Turn the relay on at 5:30 AM, turn the relay off at 7:00 AM.
 // {530, 700}
 int slots[NUMSLOTS][2] = {
-  {600, 800},
-  {1900, 2100}
+  {600, 700},
+  {800, 900},
+  {1000, 1100},
+  {1200, 1300},
+  {1400, 1500},
+  {1600, 1700},
+  {1800, 1900},
+  {2000, 2100}
   //BE SURE TO UPDATE THE NUMSLOTS CONSTANT IF YOU ADD/REMOVE
   //ROWS FROM THIS ARRAY
 };
@@ -216,6 +222,7 @@ void setup() {
   //Start trying to connect to the local Wi-Fi network
   WiFi.begin(wifi_ssid, wifi_pass);
   //Loop until connected
+  // todo: add a loop counter, and drop out after 10 tries or so
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
@@ -237,7 +244,7 @@ void setup() {
   //on or off.
   wasOn = false;
 
-  Serial.println("Exiting setup()");
+  Serial.println("Exiting setup");
 }
 
 void loop() {
@@ -252,7 +259,9 @@ void loop() {
     } else {
       //otherwise, pick a random color and set each pixel individually to that color
       //with a random time delay between setting each pixel
-      stepLights(colors[(int)random(1, numColors + 1)], (int)random(50, 500));
+      //stepLights(colors[(int)random(1, numColors + 1)], (int)random(50, 500));
+      //For a smoother color transition, use the following:
+      swapColor(colors[(int)random(1, numColors + 1)], (int)random(25, 200));
     }
   } else {
     //Use wasOn to make sure we only turn the lights off once (after they've
@@ -307,6 +316,18 @@ void stepLights(uint32_t c, int delayVal) {
     //wait for the specified period of time (in milliseconds)
     delay(delayVal);
   }  //for i
+}
+
+//Set a single color one column at a time across the array.
+//Used to 'fade' into a new color
+void swapColor(uint32_t c, int delayVal) {
+  for (uint16_t i = 0; i < pixels.numPixels(); i++) {
+    pixels.setPixelColor(i, c);
+    //Display the new row color
+    pixels.show();
+    //wait for the specified period of time (in milliseconds)
+    delay(delayVal);
+  }
 }
 
 int getTime24() {
