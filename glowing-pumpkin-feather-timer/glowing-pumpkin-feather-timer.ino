@@ -47,7 +47,7 @@ const int timeZone = EDT;
 //Populate the following variable with the number of rows in the slots array
 //I'm doing this way because Arduino doesn't have an easy way to determine
 //the size of an array at runtime, especially multidimensional arrays.
-#define NUMSLOTS 8
+#define NUMSLOTS 2
 //Use the Slots array to define when the relay(s) go on and off
 //Slots array values: {onTime, offTime };
 // Examples:
@@ -58,14 +58,8 @@ const int timeZone = EDT;
 // Turn the relay on at 5:30 AM, turn the relay off at 7:00 AM.
 // {530, 700}
 int slots[NUMSLOTS][2] = {
-  {600, 700},
-  {800, 900},
-  {1000, 1100},
-  {1200, 1300},
-  {1400, 1500},
-  {1600, 1700},
-  {1800, 1900},
-  {2000, 2100}
+  {600, 800},
+  {1700, 2100}
   //BE SURE TO UPDATE THE NUMSLOTS CONSTANT IF YOU ADD/REMOVE
   //ROWS FROM THIS ARRAY
 };
