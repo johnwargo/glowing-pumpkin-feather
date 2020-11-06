@@ -1,8 +1,8 @@
 /**************************************************
-   Glowing Pumpkin Project (Feather Version)
+   Glowing Pumpkin Project Triggered (Feather Version)
 
    By John M. Wargo
-   September, 2017
+   August, 2019
  **************************************************/
 
 //Adafruit Feather board
@@ -122,3 +122,4 @@ void stepLights(uint32_t c, int delayVal) {
     delay(delayVal);
   }  //for i  
 }
+
